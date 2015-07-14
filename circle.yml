@@ -1,0 +1,20 @@
+machine:
+  environment: {}
+dependencies:
+  override:
+    - echo linux build:
+        environment: {}
+    - 'false':
+        environment: {}
+    - echo end:
+        environment: {}
+  pre:
+    - echo linux setup:
+        environment: {}
+  post:
+    - echo WHAT
+test:
+  override:
+    - 'true'
+general:
+  build_dir: .

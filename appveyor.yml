@@ -1,0 +1,20 @@
+environment:
+  global: {}
+init: []
+install:
+  - cmd: 'setlocal & echo windows setup & endlocal'
+build_script:
+  - cmd: 'setlocal & echo windows build & endlocal'
+  - cmd: 'setlocal & exit 1 & endlocal'
+  - cmd: 'setlocal & echo end & endlocal'
+on_success:
+  - echo SUCCCESS
+on_failure:
+  - echo FAILURE
+clone_depth: 10
+cache:
+  - '%CYG_CACHE%'
+test: 'off'
+branches:
+  only:
+    - master

@@ -1,0 +1,27 @@
+builds:
+  - os: windows
+    stages:
+      setup:
+        - echo windows setup
+      build:
+        - echo windows build
+        - exit 1
+        - echo end
+
+  - os: linux
+    stages:
+      setup:
+        - echo linux setup
+      build:
+        - echo linux build
+        - false
+        - echo end
+
+  - os: osx
+    stages:
+      setup:
+        - echo osx setup
+      build:
+        - echo osx build
+        - false
+        - echo end
