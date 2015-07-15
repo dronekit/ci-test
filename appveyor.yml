@@ -4,8 +4,9 @@ init: []
 install:
   - cmd: 'setlocal & echo windows setup & endlocal'
 build_script:
+  - cmd: 'python -m pip install winappdbg'
   - cmd: 'setlocal & echo windows build & endlocal'
-  - cmd: 'setlocal & exit 1 & endlocal'
+  - cmd: 'setlocal & python -u tellme.py & endlocal'
   - cmd: 'setlocal & echo end & endlocal'
 on_success:
   - echo SUCCCESS

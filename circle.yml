@@ -16,5 +16,10 @@ dependencies:
 test:
   override:
     - 'true'
+deployment:
+  master:
+    branch: master
+    commands:
+      - echo AFTER FAILURE
 general:
   build_dir: .
